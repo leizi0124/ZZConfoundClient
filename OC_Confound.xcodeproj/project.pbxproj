@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		576176A820243B9700919E85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176A720243B9700919E85 /* AppDelegate.m */; };
+		576176AB20243B9700919E85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176AA20243B9700919E85 /* main.m */; };
+		576176AE20243B9700919E85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176AD20243B9700919E85 /* ViewController.m */; };
+		576176B020243B9700919E85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 576176AF20243B9700919E85 /* Assets.xcassets */; };
+		576176BE20243B9700919E85 /* OC_ConfoundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176BD20243B9700919E85 /* OC_ConfoundTests.m */; };
+		576176C920243B9700919E85 /* OC_ConfoundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176C820243B9700919E85 /* OC_ConfoundUITests.m */; };
+		576176E720243C1500919E85 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176D820243C1500919E85 /* Tools.m */; };
+		576176E820243C1500919E85 /* ZZConfoundModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176DA20243C1500919E85 /* ZZConfoundModel.m */; };
+		576176E920243C1500919E85 /* ZZConfoundTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176DC20243C1500919E85 /* ZZConfoundTableView.m */; };
+		576176EA20243C1500919E85 /* ZZConfoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176DE20243C1500919E85 /* ZZConfoundVC.m */; };
+		576176EB20243C1500919E85 /* ZZConfoundVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576176DF20243C1500919E85 /* ZZConfoundVC.xib */; };
+		576176EC20243C1500919E85 /* ZZFileTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176E120243C1500919E85 /* ZZFileTableView.m */; };
+		576176ED20243C1500919E85 /* ZZPathModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176E320243C1500919E85 /* ZZPathModel.m */; };
+		576176EE20243C1500919E85 /* ZZBuildConfound.py in Resources */ = {isa = PBXBuildFile; fileRef = 576176E520243C1500919E85 /* ZZBuildConfound.py */; };
+		576176EF20243C1500919E85 /* ZZFindFields.py in Resources */ = {isa = PBXBuildFile; fileRef = 576176E620243C1500919E85 /* ZZFindFields.py */; };
+		576176F120243C7400919E85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 576176F020243C7400919E85 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		576176BA20243B9700919E85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5761769B20243B9700919E85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 576176A220243B9700919E85;
+			remoteInfo = OC_Confound;
+		};
+		576176C520243B9700919E85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5761769B20243B9700919E85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 576176A220243B9700919E85;
+			remoteInfo = OC_Confound;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		576176A320243B9700919E85 /* OC_Confound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OC_Confound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		576176A620243B9700919E85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		576176A720243B9700919E85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		576176AA20243B9700919E85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		576176AC20243B9700919E85 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		576176AD20243B9700919E85 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		576176AF20243B9700919E85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		576176B420243B9700919E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576176B920243B9700919E85 /* OC_ConfoundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OC_ConfoundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		576176BD20243B9700919E85 /* OC_ConfoundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OC_ConfoundTests.m; sourceTree = "<group>"; };
+		576176BF20243B9700919E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576176C420243B9700919E85 /* OC_ConfoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OC_ConfoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		576176C820243B9700919E85 /* OC_ConfoundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OC_ConfoundUITests.m; sourceTree = "<group>"; };
+		576176CA20243B9700919E85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576176D720243C1500919E85 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		576176D820243C1500919E85 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		576176D920243C1500919E85 /* ZZConfoundModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZConfoundModel.h; sourceTree = "<group>"; };
+		576176DA20243C1500919E85 /* ZZConfoundModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZConfoundModel.m; sourceTree = "<group>"; };
+		576176DB20243C1500919E85 /* ZZConfoundTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZConfoundTableView.h; sourceTree = "<group>"; };
+		576176DC20243C1500919E85 /* ZZConfoundTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZConfoundTableView.m; sourceTree = "<group>"; };
+		576176DD20243C1500919E85 /* ZZConfoundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZConfoundVC.h; sourceTree = "<group>"; };
+		576176DE20243C1500919E85 /* ZZConfoundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZConfoundVC.m; sourceTree = "<group>"; };
+		576176DF20243C1500919E85 /* ZZConfoundVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZConfoundVC.xib; sourceTree = "<group>"; };
+		576176E020243C1500919E85 /* ZZFileTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZFileTableView.h; sourceTree = "<group>"; };
+		576176E120243C1500919E85 /* ZZFileTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZFileTableView.m; sourceTree = "<group>"; };
+		576176E220243C1500919E85 /* ZZPathModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZPathModel.h; sourceTree = "<group>"; };
+		576176E320243C1500919E85 /* ZZPathModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZPathModel.m; sourceTree = "<group>"; };
+		576176E520243C1500919E85 /* ZZBuildConfound.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ZZBuildConfound.py; sourceTree = "<group>"; };
+		576176E620243C1500919E85 /* ZZFindFields.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ZZFindFields.py; sourceTree = "<group>"; };
+		576176F020243C7400919E85 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		576176A020243B9700919E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576176B620243B9700919E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576176C120243B9700919E85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5761769A20243B9700919E85 = {
+			isa = PBXGroup;
+			children = (
+				576176D620243C1500919E85 /* ConfoundCode */,
+				576176E420243C1500919E85 /* Python_Code */,
+				576176A520243B9700919E85 /* OC_Confound */,
+				576176BC20243B9700919E85 /* OC_ConfoundTests */,
+				576176C720243B9700919E85 /* OC_ConfoundUITests */,
+				576176A420243B9700919E85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		576176A420243B9700919E85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				576176A320243B9700919E85 /* OC_Confound.app */,
+				576176B920243B9700919E85 /* OC_ConfoundTests.xctest */,
+				576176C420243B9700919E85 /* OC_ConfoundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		576176A520243B9700919E85 /* OC_Confound */ = {
+			isa = PBXGroup;
+			children = (
+				576176F020243C7400919E85 /* Main.storyboard */,
+				576176A620243B9700919E85 /* AppDelegate.h */,
+				576176A720243B9700919E85 /* AppDelegate.m */,
+				576176AC20243B9700919E85 /* ViewController.h */,
+				576176AD20243B9700919E85 /* ViewController.m */,
+				576176AF20243B9700919E85 /* Assets.xcassets */,
+				576176B420243B9700919E85 /* Info.plist */,
+				576176A920243B9700919E85 /* Supporting Files */,
+			);
+			path = OC_Confound;
+			sourceTree = "<group>";
+		};
+		576176A920243B9700919E85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				576176AA20243B9700919E85 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		576176BC20243B9700919E85 /* OC_ConfoundTests */ = {
+			isa = PBXGroup;
+			children = (
+				576176BD20243B9700919E85 /* OC_ConfoundTests.m */,
+				576176BF20243B9700919E85 /* Info.plist */,
+			);
+			path = OC_ConfoundTests;
+			sourceTree = "<group>";
+		};
+		576176C720243B9700919E85 /* OC_ConfoundUITests */ = {
+			isa = PBXGroup;
+			children = (
+				576176C820243B9700919E85 /* OC_ConfoundUITests.m */,
+				576176CA20243B9700919E85 /* Info.plist */,
+			);
+			path = OC_ConfoundUITests;
+			sourceTree = "<group>";
+		};
+		576176D620243C1500919E85 /* ConfoundCode */ = {
+			isa = PBXGroup;
+			children = (
+				576176D720243C1500919E85 /* Tools.h */,
+				576176D820243C1500919E85 /* Tools.m */,
+				576176D920243C1500919E85 /* ZZConfoundModel.h */,
+				576176DA20243C1500919E85 /* ZZConfoundModel.m */,
+				576176DB20243C1500919E85 /* ZZConfoundTableView.h */,
+				576176DC20243C1500919E85 /* ZZConfoundTableView.m */,
+				576176DD20243C1500919E85 /* ZZConfoundVC.h */,
+				576176DE20243C1500919E85 /* ZZConfoundVC.m */,
+				576176DF20243C1500919E85 /* ZZConfoundVC.xib */,
+				576176E020243C1500919E85 /* ZZFileTableView.h */,
+				576176E120243C1500919E85 /* ZZFileTableView.m */,
+				576176E220243C1500919E85 /* ZZPathModel.h */,
+				576176E320243C1500919E85 /* ZZPathModel.m */,
+			);
+			path = ConfoundCode;
+			sourceTree = "<group>";
+		};
+		576176E420243C1500919E85 /* Python_Code */ = {
+			isa = PBXGroup;
+			children = (
+				576176E520243C1500919E85 /* ZZBuildConfound.py */,
+				576176E620243C1500919E85 /* ZZFindFields.py */,
+			);
+			path = Python_Code;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		576176A220243B9700919E85 /* OC_Confound */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576176CD20243B9700919E85 /* Build configuration list for PBXNativeTarget "OC_Confound" */;
+			buildPhases = (
+				5761769F20243B9700919E85 /* Sources */,
+				576176A020243B9700919E85 /* Frameworks */,
+				576176A120243B9700919E85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OC_Confound;
+			productName = OC_Confound;
+			productReference = 576176A320243B9700919E85 /* OC_Confound.app */;
+			productType = "com.apple.product-type.application";
+		};
+		576176B820243B9700919E85 /* OC_ConfoundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576176D020243B9700919E85 /* Build configuration list for PBXNativeTarget "OC_ConfoundTests" */;
+			buildPhases = (
+				576176B520243B9700919E85 /* Sources */,
+				576176B620243B9700919E85 /* Frameworks */,
+				576176B720243B9700919E85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				576176BB20243B9700919E85 /* PBXTargetDependency */,
+			);
+			name = OC_ConfoundTests;
+			productName = OC_ConfoundTests;
+			productReference = 576176B920243B9700919E85 /* OC_ConfoundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		576176C320243B9700919E85 /* OC_ConfoundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 576176D320243B9700919E85 /* Build configuration list for PBXNativeTarget "OC_ConfoundUITests" */;
+			buildPhases = (
+				576176C020243B9700919E85 /* Sources */,
+				576176C120243B9700919E85 /* Frameworks */,
+				576176C220243B9700919E85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				576176C620243B9700919E85 /* PBXTargetDependency */,
+			);
+			name = OC_ConfoundUITests;
+			productName = OC_ConfoundUITests;
+			productReference = 576176C420243B9700919E85 /* OC_ConfoundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5761769B20243B9700919E85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = MacDemo;
+				TargetAttributes = {
+					576176A220243B9700919E85 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					576176B820243B9700919E85 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 576176A220243B9700919E85;
+					};
+					576176C320243B9700919E85 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 576176A220243B9700919E85;
+					};
+				};
+			};
+			buildConfigurationList = 5761769E20243B9700919E85 /* Build configuration list for PBXProject "OC_Confound" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5761769A20243B9700919E85;
+			productRefGroup = 576176A420243B9700919E85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				576176A220243B9700919E85 /* OC_Confound */,
+				576176B820243B9700919E85 /* OC_ConfoundTests */,
+				576176C320243B9700919E85 /* OC_ConfoundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		576176A120243B9700919E85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576176B020243B9700919E85 /* Assets.xcassets in Resources */,
+				576176F120243C7400919E85 /* Main.storyboard in Resources */,
+				576176EE20243C1500919E85 /* ZZBuildConfound.py in Resources */,
+				576176EF20243C1500919E85 /* ZZFindFields.py in Resources */,
+				576176EB20243C1500919E85 /* ZZConfoundVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576176B720243B9700919E85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576176C220243B9700919E85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5761769F20243B9700919E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576176E820243C1500919E85 /* ZZConfoundModel.m in Sources */,
+				576176EA20243C1500919E85 /* ZZConfoundVC.m in Sources */,
+				576176E920243C1500919E85 /* ZZConfoundTableView.m in Sources */,
+				576176EC20243C1500919E85 /* ZZFileTableView.m in Sources */,
+				576176ED20243C1500919E85 /* ZZPathModel.m in Sources */,
+				576176AE20243B9700919E85 /* ViewController.m in Sources */,
+				576176AB20243B9700919E85 /* main.m in Sources */,
+				576176A820243B9700919E85 /* AppDelegate.m in Sources */,
+				576176E720243C1500919E85 /* Tools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576176B520243B9700919E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576176BE20243B9700919E85 /* OC_ConfoundTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576176C020243B9700919E85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				576176C920243B9700919E85 /* OC_ConfoundUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		576176BB20243B9700919E85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 576176A220243B9700919E85 /* OC_Confound */;
+			targetProxy = 576176BA20243B9700919E85 /* PBXContainerItemProxy */;
+		};
+		576176C620243B9700919E85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 576176A220243B9700919E85 /* OC_Confound */;
+			targetProxy = 576176C520243B9700919E85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		576176CB20243B9700919E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		576176CC20243B9700919E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		576176CE20243B9700919E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OC_Confound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "MacDemo.OC-Confound";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		576176CF20243B9700919E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OC_Confound/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "MacDemo.OC-Confound";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		576176D120243B9700919E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OC_ConfoundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacDemo.OC-ConfoundTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OC_Confound.app/Contents/MacOS/OC_Confound";
+			};
+			name = Debug;
+		};
+		576176D220243B9700919E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OC_ConfoundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacDemo.OC-ConfoundTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OC_Confound.app/Contents/MacOS/OC_Confound";
+			};
+			name = Release;
+		};
+		576176D420243B9700919E85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OC_ConfoundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacDemo.OC-ConfoundUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OC_Confound;
+			};
+			name = Debug;
+		};
+		576176D520243B9700919E85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = OC_ConfoundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MacDemo.OC-ConfoundUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OC_Confound;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5761769E20243B9700919E85 /* Build configuration list for PBXProject "OC_Confound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576176CB20243B9700919E85 /* Debug */,
+				576176CC20243B9700919E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		576176CD20243B9700919E85 /* Build configuration list for PBXNativeTarget "OC_Confound" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576176CE20243B9700919E85 /* Debug */,
+				576176CF20243B9700919E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		576176D020243B9700919E85 /* Build configuration list for PBXNativeTarget "OC_ConfoundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576176D120243B9700919E85 /* Debug */,
+				576176D220243B9700919E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		576176D320243B9700919E85 /* Build configuration list for PBXNativeTarget "OC_ConfoundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576176D420243B9700919E85 /* Debug */,
+				576176D520243B9700919E85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5761769B20243B9700919E85 /* Project object */;
+}

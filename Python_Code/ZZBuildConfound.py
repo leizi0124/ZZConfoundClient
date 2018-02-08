@@ -10,6 +10,21 @@ other_name_list = []
 define_ok_list = []
 define_rand_list = []
 
+def setDefaultlist():
+    global other_name_list
+    global define_ok_list
+    default_confound_path = os.path.expanduser(r"~/Desktop/Confound/customConfounds.txt")
+    default_filter_path = os.path.expanduser(r"~/Desktop/Confound/customFilters.txt")
+    if os.path.exists(default_confound_path):
+        with open(default_confound_path) as default_confound:
+            content = default_confound.read()
+            other_name_list = other_name_list + json.loads(content)
+
+    if os.path.exists(default_filter_path):
+        with open(default_filter_path) as default_filter:
+            content = default_filter.read()
+            define_ok_list = define_ok_list + json.loads(content)
+
 def writeDefineFile():
     global property_name_list
     global other_name_list
@@ -27,8 +42,8 @@ def writeDefineFile():
 
         content = select_confound.read()
         names_dict = json.loads(content)
-        property_name_list = names_dict['propertyname']
-        other_name_list = names_dict['othername']
+        property_name_list = property_name_list + names_dict['propertyname']
+        other_name_list = other_name_list + names_dict['othername']
 
     if os.path.exists(write_file_path):
         os.remove(write_file_path)
@@ -85,5 +100,6 @@ def uperFirstString(up_string):
     up_string = first_zm.upper() + up_string[1:]
     return up_string
 
+setDefaultlist()
 writeDefineFile()
 print '10000'

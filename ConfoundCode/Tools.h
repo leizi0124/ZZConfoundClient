@@ -29,4 +29,8 @@ typedef NS_OPTIONS(NSInteger, ZZPathType) {
 + (void)subfiles:(ZZPathModel *)model selectState:(BOOL)selectState;
 //获取所有选中路径
 + (NSArray *)getAllSelectedPath;
+//弹框提示
++ (void)showAlert:(NSString *)content inView:(NSView *)view;
+//配置文件相关操作 返回成功或者失败
++ (BOOL)writeByFileName:(NSString *)fileName content:(id)content;
 @end

@@ -199,4 +199,38 @@
         [self modelSelectedPath:dirModel];
     }
 }
+#pragma mark - 弹框提示
++ (void)showAlert:(NSString *)content inView:(NSView *)view {
+    NSAlert *alert = [NSAlert new];
+    [alert addButtonWithTitle:@"确定"];
+    [alert setMessageText:content];
+    [alert setAlertStyle:NSInformationalAlertStyle];
+    [alert beginSheetModalForWindow:[view window] completionHandler:nil];
+}
+#pragma mark - 相关配置文件操作
++ (BOOL)writeByFileName:(NSString *)fileName content:(id)content {
+    
+    NSString *deskTopLocation = [NSString stringWithFormat:@"/Users/%@/Desktop",NSUserName()];
+    NSString *filePath = [deskTopLocation stringByAppendingString:[NSString stringWithFormat:@"/Confound/%@", fileName]];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSError *error = nil;
+    [manager createDirectoryAtPath:[deskTopLocation stringByAppendingString:@"/Confound"] withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    if (error) {
+        
+        return NO;
+    }
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:content options:NSJSONWritingPrettyPrinted error:&error];
+    
+    if (error) {
+        
+        return NO;
+    }
+    
+    //Data转换为JSON
+    NSString *contentJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    return [manager createFileAtPath:filePath contents:[contentJson dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
+}
 @end

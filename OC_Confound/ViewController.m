@@ -142,7 +142,7 @@
     [self buildConfoundNameFile];
     
     if (![Tools sharedInstance].confoundArray.count) {
-        [self showAlert:@"未选择文件"];
+        [Tools showAlert:@"未选择文件" inView:self.view];
         return;
     }
     
@@ -155,7 +155,7 @@
     [self buildConfoundNameFile];
     
     if (![Tools sharedInstance].confoundArray.count) {
-        [self showAlert:@"未选择文件"];
+        [Tools showAlert:@"未选择文件" inView:self.view];
         return;
     }
     
@@ -177,18 +177,23 @@
     }
     
     if (!canConfound) {
-        [self showAlert:@"没有需要混淆的字段"];
+        [Tools showAlert:@"没有需要混淆的字段" inView:self.view];
         return;
     }
     
-    [self writeByFileName:@"SelectConfoundNames.txt" content:@{@"propertyname" : selectedPropertyArray, @"othername" : selectedOtherArray}];
+    BOOL result = [Tools writeByFileName:@"SelectConfoundNames.txt" content:@{@"propertyname" : selectedPropertyArray, @"othername" : selectedOtherArray}];
+    
+    if (!result) {
+        [Tools showAlert:@"文件操作失败" inView:self.view];
+        return;
+    }
     
     NSInteger pyResult = [[self runpyWithName:@"ZZBuildConfound"] integerValue];
     
     if (pyResult == 10000) {
-        [self showAlert:@"混淆文件已生成！"];
+        [Tools showAlert:@"混淆文件已生成！" inView:self.view];
     }else {
-        [self showAlert:@"混淆文件生成失败！"];
+        [Tools showAlert:@"混淆文件生成失败！" inView:self.view];
     }
 }
 #pragma mark - 根据路径查找混淆字段
@@ -198,7 +203,12 @@
         
         [Tools sharedInstance].selectPathChange = NO;
         NSArray *allPaths = [Tools getAllSelectedPath];
-        [self writeByFileName:@"SelectConfoundFiles.txt" content:allPaths];
+        BOOL result = [Tools writeByFileName:@"SelectConfoundFiles.txt" content:allPaths];
+        
+        if (!result) {
+            [Tools showAlert:@"文件操作失败" inView:self.view];
+            return;
+        }
         
         NSString *pyResult = [self runpyWithName:@"ZZFindFields"];
         
@@ -222,45 +232,6 @@
             [[Tools sharedInstance].confoundArray addObject:model];
         }
     }
-}
-#pragma mark - 更新配置文件
-- (void)writeByFileName:(NSString *)fileName content:(id)content {
-    //获取桌面路径/Users/jb-mac/Desktop/JBSDK_webpay_dev/JBSDK
-//    NSString*bundel=[[NSBundle mainBundle] resourcePath];
-//    NSString*deskTopLocation=[[bundel substringToIndex:[bundel rangeOfString:@"Library"].location] stringByAppendingFormat:@"Desktop"];
-
-    NSString *deskTopLocation = [NSString stringWithFormat:@"/Users/%@/Desktop",NSUserName()];
-    NSString *filePath = [deskTopLocation stringByAppendingString:[NSString stringWithFormat:@"/Confound/%@", fileName]];
-    
-    NSFileManager *manager = [NSFileManager defaultManager];
-    NSError *error = nil;
-    [manager createDirectoryAtPath:[deskTopLocation stringByAppendingString:@"/Confound"] withIntermediateDirectories:YES attributes:nil error:&error];
-    
-    if (error) {
-        
-        [self showAlert:@"文件操作失败"];
-        return;
-    }
-    
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:content options:NSJSONWritingPrettyPrinted error:&error];
-    
-    if (error) {
-        
-        [self showAlert:@"文件操作失败"];
-        return;
-    }
-    
-    //Data转换为JSON
-    NSString *contentJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    [manager createFileAtPath:filePath contents:[contentJson dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
-}
-#pragma mark - 文件操作失败提示
-- (void)showAlert:(NSString *)message {
-    NSAlert *alert = [NSAlert new];
-    [alert addButtonWithTitle:@"确定"];
-    [alert setMessageText:message];
-    [alert setAlertStyle:NSWarningAlertStyle];
-    [alert beginSheetModalForWindow:[self.view window] completionHandler:nil];
 }
 #pragma mark - 运行python文件
 - (NSString *)runpyWithName:(NSString *)pyName {

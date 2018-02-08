@@ -9,6 +9,7 @@
 #import "ZZConfoundVC.h"
 #import "Tools.h"
 #import "ZZConfoundTableView.h"
+#import "ZZCustomFilterVC.h"
 @interface ZZConfoundVC ()<NSWindowDelegate>
 {
     ZZConfoundTableView *selectedTableView;
@@ -53,5 +54,17 @@
 - (IBAction)buildConfoundFile:(NSButton *)sender {
     
     [self dismissController:self];
+}
+#pragma mark - 增加自定义混淆字段
+- (IBAction)customFilters:(NSButton *)sender {
+    ZZCustomFilterVC *customVC = [[ZZCustomFilterVC alloc] init];
+    customVC.modeType = fModeTypeAdd;
+    [self presentViewControllerAsSheet:customVC];
+}
+#pragma mark - 增加自定义过滤字段
+- (IBAction)confoundFilters:(NSButton *)sender {
+    ZZCustomFilterVC *customVC = [[ZZCustomFilterVC alloc] init];
+    customVC.modeType = fModeTypeFilter;
+    [self presentViewControllerAsSheet:customVC];
 }
 @end

@@ -110,7 +110,6 @@ ex_clude_list = ['allocWithZone','copyWithZone','dealloc','viewDidLoad','shouldA
                  'destBytes','destLen','textViewShouldBeginEditing','option_setupPopOption','_setupParams','_tapGesturePressed','JSONObject','password','description','pickView',
                  'pickerView','state','array','rightView','leftViewRectForBounds','rightViewRectForBounds','textRectForBounds']
 
-# results = property_name_list + normal_pro_name_list + class_name_list + method_name_list + ex_clude_list
 ex_clude_list = ex_clude_list + dict_key_list
 
 #property属性名

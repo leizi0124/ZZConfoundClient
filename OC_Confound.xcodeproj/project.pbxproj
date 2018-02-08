@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5727876D2029D4270077DBDA /* ZZCustomFilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5727876B2029D4270077DBDA /* ZZCustomFilterVC.m */; };
+		5727876E2029D4270077DBDA /* ZZCustomFilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5727876C2029D4270077DBDA /* ZZCustomFilterVC.xib */; };
 		576176A820243B9700919E85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176A720243B9700919E85 /* AppDelegate.m */; };
 		576176AB20243B9700919E85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176AA20243B9700919E85 /* main.m */; };
 		576176AE20243B9700919E85 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 576176AD20243B9700919E85 /* ViewController.m */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5727876A2029D4270077DBDA /* ZZCustomFilterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCustomFilterVC.h; sourceTree = "<group>"; };
+		5727876B2029D4270077DBDA /* ZZCustomFilterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCustomFilterVC.m; sourceTree = "<group>"; };
+		5727876C2029D4270077DBDA /* ZZCustomFilterVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZCustomFilterVC.xib; sourceTree = "<group>"; };
 		576176A320243B9700919E85 /* OC_Confound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OC_Confound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576176A620243B9700919E85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		576176A720243B9700919E85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,9 +105,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5727876F202A9D1E0077DBDA /* database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = database;
+			sourceTree = "<group>";
+		};
 		5761769A20243B9700919E85 = {
 			isa = PBXGroup;
 			children = (
+				5727876F202A9D1E0077DBDA /* database */,
 				576176D620243C1500919E85 /* ConfoundCode */,
 				576176E420243C1500919E85 /* Python_Code */,
 				576176A520243B9700919E85 /* OC_Confound */,
@@ -179,6 +192,9 @@
 				576176E120243C1500919E85 /* ZZFileTableView.m */,
 				576176E220243C1500919E85 /* ZZPathModel.h */,
 				576176E320243C1500919E85 /* ZZPathModel.m */,
+				5727876A2029D4270077DBDA /* ZZCustomFilterVC.h */,
+				5727876B2029D4270077DBDA /* ZZCustomFilterVC.m */,
+				5727876C2029D4270077DBDA /* ZZCustomFilterVC.xib */,
 			);
 			path = ConfoundCode;
 			sourceTree = "<group>";
@@ -296,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				576176B020243B9700919E85 /* Assets.xcassets in Resources */,
+				5727876E2029D4270077DBDA /* ZZCustomFilterVC.xib in Resources */,
 				576176F120243C7400919E85 /* Main.storyboard in Resources */,
 				576176EE20243C1500919E85 /* ZZBuildConfound.py in Resources */,
 				576176EF20243C1500919E85 /* ZZFindFields.py in Resources */,
@@ -333,6 +350,7 @@
 				576176AB20243B9700919E85 /* main.m in Sources */,
 				576176A820243B9700919E85 /* AppDelegate.m in Sources */,
 				576176E720243C1500919E85 /* Tools.m in Sources */,
+				5727876D2029D4270077DBDA /* ZZCustomFilterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

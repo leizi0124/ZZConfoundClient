@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
@@ -36,8 +35,28 @@
                         <action selector="buildConfoundFile:" target="-2" id="FEd-Ms-VYY"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2m0-Su-Ttg">
+                    <rect key="frame" x="446" y="273" width="108" height="32"/>
+                    <buttonCell key="cell" type="push" title="过滤混淆字段" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HUv-Pn-682">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="confoundFilters:" target="-2" id="195-PX-d1E"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37S-as-c6s">
+                    <rect key="frame" x="446" y="311" width="108" height="32"/>
+                    <buttonCell key="cell" type="push" title="增加混淆字段" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JFo-5d-pme">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="customFilters:" target="-2" id="gKG-RP-6js"/>
+                    </connections>
+                </button>
             </subviews>
-            <point key="canvasLocation" x="39" y="143"/>
+            <point key="canvasLocation" x="-20" y="29"/>
         </customView>
     </objects>
 </document>

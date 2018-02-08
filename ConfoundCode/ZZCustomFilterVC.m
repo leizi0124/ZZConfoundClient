@@ -8,8 +8,6 @@
 
 #import "ZZCustomFilterVC.h"
 #import "Tools.h"
-#define ADD_NORMAL_CONFOUNDS @"ADD_NORMAL_CONFOUNDS"
-#define ADD_NORMAL_FILTERS @"ADD_NORMAL_FILTERS"
 @interface ZZCustomFilterVC ()<NSWindowDelegate, NSTextViewDelegate>
 @property (nonatomic, strong) NSTextView *theTextView;
 @property (nonatomic, strong) NSScrollView *scrollView;
@@ -55,40 +53,24 @@
 }
 #pragma mark - 确定
 - (IBAction)okAction:(NSButton *)sender {
-    NSLog(@"确定");
+    
     switch (self.modeType) {
         case fModeTypeAdd:{
             
             [[NSUserDefaults standardUserDefaults] setObject:self.theTextView.string forKey:ADD_NORMAL_CONFOUNDS];
-            NSArray *contentArray= [self.theTextView.string componentsSeparatedByString:@","];
-            BOOL result = [Tools writeByFileName:@"customConfounds.txt" content:contentArray];
-            NSLog(@"customConfounds == %zd",result);
             
-            if (!result) {
-                
-                [Tools showAlert:@"文件操作失败" inView:self.view];
-                return;
-            }
         }
             break;
         case fModeTypeFilter:{
             
             [[NSUserDefaults standardUserDefaults] setObject:self.theTextView.string forKey:ADD_NORMAL_FILTERS];
-            NSArray *contentArray= [self.theTextView.string componentsSeparatedByString:@","];
-            BOOL result = [Tools writeByFileName:@"customFilters.txt" content:contentArray];
-            NSLog(@"customFilters == %zd",result);
             
-            if (!result) {
-                
-                [Tools showAlert:@"文件操作失败" inView:self.view];
-                return;
-            }
         }
             break;
         default:
             break;
     }
-    NSLog(@"确定 over");
+    
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     [self dismissController:self];

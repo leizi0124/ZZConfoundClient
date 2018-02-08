@@ -152,6 +152,8 @@
 #pragma mark - 生成混淆文件
 - (IBAction)buildConfoundFile:(NSButton *)sender {
     
+    [self setNormalConfound];
+    
     [self buildConfoundNameFile];
     
     if (![Tools sharedInstance].confoundArray.count) {
@@ -231,6 +233,27 @@
             model.modelType = ZZOtherType;
             [[Tools sharedInstance].confoundArray addObject:model];
         }
+    }
+}
+#pragma mark - 将默认设置写入配置
+- (void)setNormalConfound {
+    
+    NSString *customConfound = [[NSUserDefaults standardUserDefaults] valueForKey:ADD_NORMAL_CONFOUNDS];
+    NSArray *confoundArray= [customConfound componentsSeparatedByString:@","];
+    BOOL confoundResult = [Tools writeByFileName:@"customConfounds.txt" content:confoundArray];
+    
+    if (!confoundResult) {
+        
+        [Tools showAlert:@"自定义混淆字段文件操作失败" inView:self.view];
+    }
+    
+    NSString *customFilter = [[NSUserDefaults standardUserDefaults] valueForKey:ADD_NORMAL_FILTERS];
+    NSArray *FilterArray= [customFilter componentsSeparatedByString:@","];
+    BOOL filterResult = [Tools writeByFileName:@"customFilters.txt" content:FilterArray];
+    
+    if (!filterResult) {
+        
+        [Tools showAlert:@"自定义过滤字段文件操作失败" inView:self.view];
     }
 }
 #pragma mark - 运行python文件

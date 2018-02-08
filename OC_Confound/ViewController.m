@@ -193,7 +193,7 @@
     NSInteger pyResult = [[self runpyWithName:@"ZZBuildConfound"] integerValue];
     
     if (pyResult == 10000) {
-        [Tools showAlert:@"混淆文件已生成！" inView:self.view];
+        [Tools showAlert:@"混淆文件已生成！~/Desktop/Confound" inView:self.view];
     }else {
         [Tools showAlert:@"混淆文件生成失败！" inView:self.view];
     }
@@ -276,6 +276,54 @@
     NSString *strReturnFromPython = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     
     return strReturnFromPython;
+}
+#pragma mark - 文件名混淆
+- (IBAction)confoundFilesName:(NSButton *)sender {
+    
+    [self buildConfoundNameFile];
+    
+    if (![Tools sharedInstance].confoundArray.count) {
+        [Tools showAlert:@"未选择文件" inView:self.view];
+        return;
+    }
+    
+    BOOL findConfigFile = NO;
+    
+    for (NSString *filePath in [Tools getAllSelectedPath]) {
+        if ([filePath rangeOfString:@"project.pbxproj"].location != NSNotFound) {
+            findConfigFile = YES;
+            break;
+        }
+    }
+    
+    if (!findConfigFile) {
+        [Tools showAlert:@"失败，请勾选 xxx.xcodeproj 配置文件！" inView:self.view];
+        return;
+    }
+    
+    NSAlert *alert = [NSAlert new];
+    [alert addButtonWithTitle:@"确定混淆"];
+    [alert addButtonWithTitle:@"取消"];
+    [alert setMessageText:@"文件名混淆会修改配置文件,建议在分支上进行!"];
+    [alert setAlertStyle:NSInformationalAlertStyle];
+    [alert beginSheetModalForWindow:[self.view window] completionHandler:^(NSModalResponse returnCode) {
+        if (returnCode == 1000) {
+            
+            NSString *result = [self runpyWithName:@"ZZFileNameConfound"];
+            NSDictionary *confoundDict = [NSJSONSerialization JSONObjectWithData:[result dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
+            
+            if ([confoundDict[@"result"] integerValue] == 1) {
+                
+                [Tools showAlert:@"文件名混淆成功！" inView:self.view];
+            }else {
+                
+                NSInteger re_failure_num = [confoundDict[@"re_failure_num"] integerValue];
+                NSInteger failure_num = [confoundDict[@"failure_num"] integerValue];
+                NSString *message = [NSString stringWithFormat:@"文件名混淆失败！\n正则失败数：%zd\n混淆失败数：%zd",re_failure_num,failure_num];
+                [Tools showAlert:message inView:self.view];
+            }
+        }
+    }];
 }
 
 - (void)setRepresentedObject:(id)representedObject {

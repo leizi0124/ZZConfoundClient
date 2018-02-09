@@ -36,4 +36,6 @@ typedef NS_OPTIONS(NSInteger, ZZPathType) {
 + (void)showAlert:(NSString *)content inView:(NSView *)view;
 //配置文件相关操作 返回成功或者失败
 + (BOOL)writeByFileName:(NSString *)fileName content:(id)content;
+//返回结果
++ (NSString *)runpyWithName:(NSString *)pyName;
 @end

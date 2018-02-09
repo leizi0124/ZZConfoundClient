@@ -190,7 +190,7 @@
         return;
     }
     
-    NSInteger pyResult = [[self runpyWithName:@"ZZBuildConfound"] integerValue];
+    NSInteger pyResult = [[Tools runpyWithName:@"ZZBuildConfound"] integerValue];
     
     if (pyResult == 10000) {
         [Tools showAlert:@"混淆文件已生成！~/Desktop/Confound" inView:self.view];
@@ -212,7 +212,7 @@
             return;
         }
         
-        NSString *pyResult = [self runpyWithName:@"ZZFindFields"];
+        NSString *pyResult = [Tools runpyWithName:@"ZZFindFields"];
         
         NSDictionary *confoundDict = [NSJSONSerialization JSONObjectWithData:[pyResult dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
         
@@ -256,27 +256,6 @@
         [Tools showAlert:@"自定义过滤字段文件操作失败" inView:self.view];
     }
 }
-#pragma mark - 运行python文件
-- (NSString *)runpyWithName:(NSString *)pyName {
-    
-    NSString *pyScriptPath = [[NSBundle mainBundle] pathForResource:pyName ofType:@"py"];
-    NSTask *pythonTask = [[NSTask alloc]init];
-    [pythonTask setLaunchPath:@"/bin/bash"];
-    NSString *pyStr = [NSString stringWithFormat:@"python %@",pyScriptPath];
-    
-    [pythonTask setArguments:[NSArray arrayWithObjects:@"-c",pyStr, nil]];
-    
-    NSPipe *pipe = [[NSPipe alloc]init];
-    [pythonTask setStandardOutput:pipe];
-    
-    [pythonTask launch];
-    
-    NSFileHandle *file = [pipe fileHandleForReading];
-    NSData *data =[file readDataToEndOfFile];
-    NSString *strReturnFromPython = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    
-    return strReturnFromPython;
-}
 #pragma mark - 文件名混淆
 - (IBAction)confoundFilesName:(NSButton *)sender {
     
@@ -309,7 +288,7 @@
     [alert beginSheetModalForWindow:[self.view window] completionHandler:^(NSModalResponse returnCode) {
         if (returnCode == 1000) {
             
-            NSString *result = [self runpyWithName:@"ZZFileNameConfound"];
+            NSString *result = [Tools runpyWithName:@"ZZFileNameConfound"];
             NSDictionary *confoundDict = [NSJSONSerialization JSONObjectWithData:[result dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
             
             if ([confoundDict[@"result"] integerValue] == 1) {
@@ -325,7 +304,6 @@
         }
     }];
 }
-
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 }

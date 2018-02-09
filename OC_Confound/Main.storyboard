@@ -756,7 +756,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zm-kI-7pI">
-                                <rect key="frame" x="-1" y="95" width="107" height="32"/>
+                                <rect key="frame" x="-1" y="60" width="107" height="32"/>
                                 <buttonCell key="cell" type="push" title="文件名混淆" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="np9-ul-yxJ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="13" name=".PingFangSC-Regular"/>

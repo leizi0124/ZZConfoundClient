@@ -233,4 +233,25 @@
     NSString *contentJson = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     return [manager createFileAtPath:filePath contents:[contentJson dataUsingEncoding:NSUTF8StringEncoding] attributes:nil];
 }
+#pragma mark - 运行python文件
++ (NSString *)runpyWithName:(NSString *)pyName {
+    
+    NSString *pyScriptPath = [[NSBundle mainBundle] pathForResource:pyName ofType:@"py"];
+    NSTask *pythonTask = [[NSTask alloc]init];
+    [pythonTask setLaunchPath:@"/bin/bash"];
+    NSString *pyStr = [NSString stringWithFormat:@"python %@",pyScriptPath];
+    
+    [pythonTask setArguments:[NSArray arrayWithObjects:@"-c",pyStr, nil]];
+    
+    NSPipe *pipe = [[NSPipe alloc]init];
+    [pythonTask setStandardOutput:pipe];
+    
+    [pythonTask launch];
+    
+    NSFileHandle *file = [pipe fileHandleForReading];
+    NSData *data =[file readDataToEndOfFile];
+    NSString *strReturnFromPython = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    
+    return strReturnFromPython;
+}
 @end
